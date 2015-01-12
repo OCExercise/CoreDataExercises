@@ -14,8 +14,10 @@
 #import "Person.h"
 
 
-@interface PeopleTableViewController : UITableViewController
+@interface PeopleTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
-@property (strong, nonatomic) NSManagedObjectContext * managedObjectContext;
+@property (nonatomic, strong) NSManagedObjectContext * managedObjectContext;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+
 
 @end
