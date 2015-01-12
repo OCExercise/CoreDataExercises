@@ -14,6 +14,9 @@
 		1D9ABD001A6379DC0011A855 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D9ABCFE1A6379DC0011A855 /* LaunchScreen.xib */; };
 		1D9ABD0C1A6379DC0011A855 /* CoreDataTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9ABD0B1A6379DC0011A855 /* CoreDataTestTests.m */; };
 		1D9ABD181A637A6D0011A855 /* PeopleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9ABD171A637A6D0011A855 /* PeopleTableViewController.m */; };
+		1D9ABD1B1A6380350011A855 /* AddPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9ABD1A1A6380350011A855 /* AddPersonViewController.m */; };
+		1D9ABD201A63860E0011A855 /* CoreDataTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D9ABD1E1A63860E0011A855 /* CoreDataTest.xcdatamodeld */; };
+		1D9ABD231A63867F0011A855 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D9ABD221A63867F0011A855 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +41,15 @@
 		1D9ABD051A6379DC0011A855 /* CoreDataTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D9ABD0A1A6379DC0011A855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D9ABD0B1A6379DC0011A855 /* CoreDataTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestTests.m; sourceTree = "<group>"; };
-		1D9ABD161A637A6D0011A855 /* PeopleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PeopleTableViewController.h; path = Controllers/PeopleTableViewController.h; sourceTree = "<group>"; };
-		1D9ABD171A637A6D0011A855 /* PeopleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PeopleTableViewController.m; path = Controllers/PeopleTableViewController.m; sourceTree = "<group>"; };
+		1D9ABD161A637A6D0011A855 /* PeopleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleTableViewController.h; sourceTree = "<group>"; };
+		1D9ABD171A637A6D0011A855 /* PeopleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleTableViewController.m; sourceTree = "<group>"; };
+		1D9ABD191A6380350011A855 /* AddPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPersonViewController.h; sourceTree = "<group>"; };
+		1D9ABD1A1A6380350011A855 /* AddPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPersonViewController.m; sourceTree = "<group>"; };
+		1D9ABD1C1A6384DD0011A855 /* CoreDataTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreDataTest-Prefix.pch"; sourceTree = "<group>"; };
+		1D9ABD1F1A63860E0011A855 /* CoreDataTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataTest.xcdatamodel; sourceTree = "<group>"; };
+		1D9ABD211A63867F0011A855 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		1D9ABD221A63867F0011A855 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		1D9ABD241A638E620011A855 /* NamedEntityProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NamedEntityProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +91,10 @@
 		1D9ABCEE1A6379DC0011A855 /* CoreDataTest */ = {
 			isa = PBXGroup;
 			children = (
-				1D9ABD151A637A490011A855 /* Controllers */,
 				1D9ABCF31A6379DC0011A855 /* AppDelegate.h */,
 				1D9ABCF41A6379DC0011A855 /* AppDelegate.m */,
+				1D9ABD1D1A6385C20011A855 /* Models */,
+				1D9ABD151A637A490011A855 /* Controllers */,
 				1D9ABCF91A6379DC0011A855 /* Main.storyboard */,
 				1D9ABCFC1A6379DC0011A855 /* Images.xcassets */,
 				1D9ABCFE1A6379DC0011A855 /* LaunchScreen.xib */,
@@ -97,6 +108,7 @@
 			children = (
 				1D9ABCF01A6379DC0011A855 /* Info.plist */,
 				1D9ABCF11A6379DC0011A855 /* main.m */,
+				1D9ABD1C1A6384DD0011A855 /* CoreDataTest-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -123,8 +135,21 @@
 			children = (
 				1D9ABD161A637A6D0011A855 /* PeopleTableViewController.h */,
 				1D9ABD171A637A6D0011A855 /* PeopleTableViewController.m */,
+				1D9ABD191A6380350011A855 /* AddPersonViewController.h */,
+				1D9ABD1A1A6380350011A855 /* AddPersonViewController.m */,
 			);
-			name = Controllers;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1D9ABD1D1A6385C20011A855 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D9ABD1E1A63860E0011A855 /* CoreDataTest.xcdatamodeld */,
+				1D9ABD211A63867F0011A855 /* Person.h */,
+				1D9ABD221A63867F0011A855 /* Person.m */,
+				1D9ABD241A638E620011A855 /* NamedEntityProtocol.h */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,9 +252,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D9ABD231A63867F0011A855 /* Person.m in Sources */,
 				1D9ABD181A637A6D0011A855 /* PeopleTableViewController.m in Sources */,
 				1D9ABCF51A6379DC0011A855 /* AppDelegate.m in Sources */,
 				1D9ABCF21A6379DC0011A855 /* main.m in Sources */,
+				1D9ABD1B1A6380350011A855 /* AddPersonViewController.m in Sources */,
+				1D9ABD201A63860E0011A855 /* CoreDataTest.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "CoreDataTest/CoreDataTest-Prefix.pch";
 				INFOPLIST_FILE = CoreDataTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,6 +392,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "CoreDataTest/CoreDataTest-Prefix.pch";
 				INFOPLIST_FILE = CoreDataTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -434,6 +464,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1D9ABD1E1A63860E0011A855 /* CoreDataTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1D9ABD1F1A63860E0011A855 /* CoreDataTest.xcdatamodel */,
+			);
+			currentVersion = 1D9ABD1F1A63860E0011A855 /* CoreDataTest.xcdatamodel */;
+			path = CoreDataTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1D9ABCE41A6379DC0011A855 /* Project object */;
 }
